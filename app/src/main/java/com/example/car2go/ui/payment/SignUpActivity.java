@@ -122,9 +122,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                                     if (task.isSuccessful()){
                                         Toast.makeText(SignUpActivity.this,"User has been registered successfully!",Toast.LENGTH_LONG).show();
                                         progressBar.setVisibility(View.GONE);
-
-
                                         //redirect to login layout
+                                        startActivity(new Intent(SignUpActivity.this, LoginActivity.class));
                                     }else{
                                         Toast.makeText(SignUpActivity.this, "Failed to register! Try again!", Toast.LENGTH_LONG).show();
                                         progressBar.setVisibility(View.GONE);

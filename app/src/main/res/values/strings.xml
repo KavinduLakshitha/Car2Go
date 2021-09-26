@@ -34,7 +34,7 @@
     <string name="tv_linkSignUp">Dont have an Account?  </string>
     <string name="tv_subHeadingSignUp">Sign Up to start your new journey!</string>
     <string name="title_activity_add_driver_details">AddDriverDetails</string>
-    <string name="tv_driverDetailHeading">Few more steps there to confirm!</string>
+    <string name="tv_driverDetailHeading">Few more steps to confirm!</string>
     <string name="tv_enterReservationCode">Enter your Reservation Code</string>
     <string name="tv_addDriverDetails">Who is driving?</string>
     <string name="et_firstName" />

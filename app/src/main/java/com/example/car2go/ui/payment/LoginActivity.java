@@ -106,7 +106,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
                     if(user.isEmailVerified()) {
                         //redirect to user profile
-                        startActivity(new Intent(LoginActivity.this, SignUpActivity.class));
+
+                        startActivity(new Intent(LoginActivity.this, AddDetailsActivity.class));
                         progressBar.setVisibility(View.GONE);
                     }else{
                         user.sendEmailVerification();

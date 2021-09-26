@@ -71,7 +71,7 @@
         android:id="@+id/btn_signup"
         android:layout_width="300dp"
         android:layout_height="40dp"
-        android:layout_marginTop="344dp"
+        android:layout_marginTop="308dp"
         android:background="@drawable/custom_button"
         android:text="@string/btn_signup"
         android:textColor="#FFFFFF"
@@ -86,17 +86,15 @@
         android:id="@+id/btn_login"
         android:layout_width="300dp"
         android:layout_height="40dp"
-        android:layout_marginTop="408dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/custom_button"
         android:text="@string/btn_login"
         android:textColor="#FFFFFF"
         android:textSize="15sp"
         app:backgroundTint="#0000C8"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_subheading"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_signup" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
