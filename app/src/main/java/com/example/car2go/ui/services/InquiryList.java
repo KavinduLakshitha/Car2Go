@@ -29,6 +29,7 @@ public class InquiryList extends ArrayAdapter<Inquiry> {
     public View getView(int position,  View convertView,  ViewGroup parent) {
         LayoutInflater inflater = context.getLayoutInflater();
         View listViewItem = inflater.inflate(R.layout.inquiry_list,null,true);
+        TextView textViewID = (TextView) listViewItem.findViewById(R.id.textViewID);
         TextView textViewName = (TextView) listViewItem.findViewById(R.id.textViewName);
         TextView textViewNIC = (TextView) listViewItem.findViewById(R.id.textViewNIC);
         TextView textViewEmail = (TextView) listViewItem.findViewById(R.id.textViewEmail);
@@ -37,6 +38,7 @@ public class InquiryList extends ArrayAdapter<Inquiry> {
 
 
         Inquiry inquiry = inquiryList.get(position);
+        textViewID.setText(inquiry.getCustomerName());
         textViewName.setText(inquiry.getCustomerName());
         textViewNIC.setText(inquiry.getCustomerNIC());
         textViewEmail.setText(inquiry.getCustomerEmail());

@@ -8,6 +8,7 @@ public class Inquiry {
     String customerPhone;
     String customerInquiry;
 
+    public Inquiry(){}
 
     public Inquiry(String inquiryId, String customerName, String customerNIC, String customerEmail, String customerPhone, String customerInquiry) {
         this.inquiryId = inquiryId;

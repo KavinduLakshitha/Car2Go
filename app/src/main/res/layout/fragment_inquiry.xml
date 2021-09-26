@@ -25,7 +25,7 @@
             android:id="@+id/enter_name"
             android:layout_width="211dp"
             android:layout_height="26dp"
-            android:layout_marginEnd="48dp"
+            android:layout_marginEnd="56dp"
             android:background="#1C0000C8"
             android:ems="10"
             android:inputType="textPersonName"
@@ -74,7 +74,7 @@
             android:background="#1C0000C8"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="@string/input_email"
+            android:text="@string/input_phone"
             android:textColor="#66000000"
             app:layout_constraintBaseline_toBaselineOf="@+id/Phone"
             app:layout_constraintEnd_toEndOf="parent"
@@ -181,13 +181,14 @@
 
         <ListView
             android:id="@+id/listViewInquiry"
-            android:layout_width="391dp"
-            android:layout_height="403dp"
+            android:layout_width="397dp"
+            android:layout_height="301dp"
             android:layout_marginTop="28dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/enter_inquiry" />
+            app:layout_constraintTop_toBottomOf="@+id/enter_inquiry"
+            app:layout_constraintVertical_bias="0.558" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -28,4 +28,5 @@
     <string name="inq_inquiry">Inquiry</string>
     <string name="input_inquiry">Inquiry</string>
     <string name="inq_send_btn">Send</string>
+    <string name="input_phone">enter phone number</string>
 </resources>
