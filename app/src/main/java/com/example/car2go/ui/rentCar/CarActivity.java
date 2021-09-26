@@ -63,7 +63,6 @@ public class CarActivity extends AppCompatActivity {
     }
 
 
-
     private void saveTripDetails(){
         String Start = start.getText().toString().trim();
         String End = end.getText().toString().trim();
@@ -87,11 +86,11 @@ public class CarActivity extends AppCompatActivity {
              pickup.setError("required");
              pickup.requestFocus();
         }
-         if(RetLocation.isEmpty()){
+        if(RetLocation.isEmpty()){
              retLocation.setError("required");
              retLocation.requestFocus();
          }
-         else{
+        else{
 
              String id  = dbTripDetails.push().getKey();
 

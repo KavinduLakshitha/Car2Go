@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Car2GO">
-        <activity android:name=".ui.rentCar.SummaryActivity"></activity>
+        <activity android:name=".ui.rentCar.SummaryActivity"/>
         <activity android:name=".ui.rentCar.CarActivity" />
         <activity android:name=".ui.rentCar.RentCarActivity" />
         <activity
