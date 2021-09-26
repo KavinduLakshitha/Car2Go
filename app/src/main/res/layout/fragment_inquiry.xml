@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.services.AddInquiry">
+
+
+        <TextView
+            android:id="@+id/INQUIRY"
+            android:layout_width="136dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/inquiry"
+            android:textColor="#000000"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.211"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/enter_name"
+            android:layout_width="211dp"
+            android:layout_height="26dp"
+            android:layout_marginEnd="56dp"
+            android:background="#1C0000C8"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/name_input"
+            android:textColor="#65000000"
+            app:layout_constraintBaseline_toBaselineOf="@+id/inq_name"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <EditText
+            android:id="@+id/enter_email"
+            android:layout_width="211dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="20dp"
+            android:background="#1C0000C8"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/input_email"
+            android:textColor="#66000000"
+            app:layout_constraintBaseline_toBaselineOf="@+id/email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.508"
+            app:layout_constraintStart_toEndOf="@+id/email"
+            tools:text="enter your email address" />
+
+        <EditText
+            android:id="@+id/enter_nic"
+            android:layout_width="211dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="20dp"
+            android:background="#1C0000C8"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/nic_input"
+            android:textColor="#66000000"
+            app:layout_constraintBaseline_toBaselineOf="@+id/inq_nic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.572"
+            app:layout_constraintStart_toEndOf="@+id/inq_nic"
+            tools:text="enter your nic number" />
+
+        <EditText
+            android:id="@+id/enter_phone"
+            android:layout_width="211dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="20dp"
+            android:background="#1C0000C8"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/input_phone"
+            android:textColor="#66000000"
+            app:layout_constraintBaseline_toBaselineOf="@+id/Phone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.476"
+            app:layout_constraintStart_toEndOf="@+id/Phone"
+            tools:text="enter your phone number" />
+
+        <TextView
+            android:id="@+id/inq_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/inq_name"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/enter_name"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/INQUIRY" />
+
+        <TextView
+            android:id="@+id/inq_nic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="80dp"
+            android:text="@string/inq_nic"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/enter_name"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inq_name" />
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="50dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="80dp"
+            android:text="@string/inq_email"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/enter_name"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inq_nic" />
+
+        <TextView
+            android:id="@+id/Phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="80dp"
+            android:text="@string/inq_phone"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/enter_name"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email" />
+
+        <TextView
+            android:id="@+id/Inquiry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/inq_inquiry"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Phone" />
+
+        <EditText
+            android:id="@+id/enter_inquiry"
+            android:layout_width="224dp"
+            android:layout_height="87dp"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="20dp"
+            android:background="#1C0000C8"
+            android:ems="10"
+            android:inputType="textLongMessage"
+            android:textColor="#66000000"
+            app:layout_constraintStart_toEndOf="@+id/Inquiry"
+            app:layout_constraintTop_toBottomOf="@+id/enter_phone" />
+
+        <Button
+            android:id="@+id/Send"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/inq_send_btn"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.885"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enter_inquiry" />
+
+        <ListView
+            android:id="@+id/listViewInquiry"
+            android:layout_width="397dp"
+            android:layout_height="301dp"
+            android:layout_marginTop="28dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enter_inquiry"
+            app:layout_constraintVertical_bias="0.558" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
