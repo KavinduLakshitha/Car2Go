@@ -11,11 +11,11 @@
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
-    <fragment
+    <activity
         android:id="@+id/nav_rentCar"
-        android:name="com.example.car2go.ui.rentCar.RentCarFragment"
+        android:name="com.example.car2go.ui.rentCar.RentCarActivity"
         android:label="Rent Car"
-        tools:layout="@layout/fragment_rent_car" />
+        tools:layout="@layout/activity_rent_car" />
 
     <fragment
         android:id="@+id/nav_admin"
