@@ -4,17 +4,60 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:alpha="2000"
+    android:background="@drawable/bg"
+    android:visibility="visible"
     tools:context=".ui.services.ServicesFragment">
 
-
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/inquiry"
+        android:layout_width="201dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="124dp"
+        android:alpha="1"
+        android:text="@string/inquiry_btn"
+        app:backgroundTint="#0000C8"
+        app:cornerRadius="30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/rate_us"
+        android:layout_width="201dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="80dp"
+        android:alpha="1"
+        android:text="@string/rateus_btn"
+        app:backgroundTint="#0000C8"
+        app:cornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inquiry" />
+
+    <Button
+        android:id="@+id/con_us"
+        android:layout_width="201dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="80dp"
+        android:alpha="1"
+        android:text="@string/contactus_btn"
+        app:backgroundTint="#0000C8"
+        app:cornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rate_us" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="83dp"
+        android:layout_height="84dp"
+        android:layout_marginBottom="60dp"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/con_us"
+        app:layout_constraintVertical_bias="0.807" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

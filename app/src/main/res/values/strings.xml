@@ -12,14 +12,5 @@
     <string name="menu_admin">Admin Panel</string>
     <string name="menu_services">Customer Service</string>
     <string name="menu_profile">My Account</string>
-    <string name="tv_proheading">My Profile</string>
-    <string name="home_heading">heading</string>
-    <string name="heading">Find the  perfect car for any occasion</string>
-    <string name="headingempty" />
-    <string name="cs_tv">24x7 Customer Support</string>
-    <string name="cs_txt">Rest easy knowing that everyone in the  Car2Go Community is  screened, and 24x7 Support is just a tap away.</string>
-    <string name="eo_tv">Choose from many models you won\'t find anywhere else. Come and pick it up whenever you want.</string>
-    <string name="endlesso_tv">Endless Options</string>
-    <string name="ds_tv">Drive Confidently</string>
-    <string name="ds_txt">Drive confidently with your choise of Insurance Plans. All plans are included with the most liable insurance companies in Sri Lanka.</string>
+
 </resources>

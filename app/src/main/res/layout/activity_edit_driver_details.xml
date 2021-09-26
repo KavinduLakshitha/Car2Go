@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.payment.EditDriverDetailsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/topView"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/purple_500"
+            />
+
+        <TextView
+            android:id="@+id/tv_addDriverDetails"
+            android:layout_width="237dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="46dp"
+            android:layout_marginBottom="0dp"
+            android:text="Driver Details"
+            android:textColor="#00008C"
+            android:textSize="25sp"
+            android:textStyle="bold|italic" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="40dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_cardNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_enterDriverName"
+                android:textColor="#121111"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/et_driverName"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="Full Name"
+                android:inputType="textPersonName"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:text="@string/et_text"
+                android:textColorHint="#90080809"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_enterEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/tv_enterEmail"
+                android:textColor="#121111"
+                android:textSize="17sp" />
+
+
+            <EditText
+                android:id="@+id/et_driveEmail"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:text="@string/et_email"
+                android:textColorHint="#90080809"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/tv_enterNIC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/tv_enterNIC"
+                android:textColor="#121111"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/et_driverNic"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_margin="16dp"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="NIC Number"
+                android:inputType="text"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:text="@string/et_driverNIC"
+                android:textColorHint="#90080809"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_addLicenseDetails"
+            android:layout_width="237dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="46dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="0dp"
+            android:text="License Details"
+            android:textColor="#00008C"
+            android:textSize="25sp"
+            android:textStyle="bold|italic" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="40dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_LicenseNumber"
+            android:layout_width="292dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="16dp"
+            android:text="@string/tv_enterLicenseNumber"
+            android:textColor="#121111"
+            android:textSize="18sp"
+            android:typeface="sans"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.319"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_chooseFromGallery" />
+
+
+        <EditText
+            android:id="@+id/et_licenseNum"
+            android:layout_width="250dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/custom_input"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="B355807"
+            android:inputType="textPersonName"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:text="@string/et_reservationCode"
+            android:textColorHint="#90080809"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_enterExpiryDate"
+            android:layout_width="291dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/tv_enterExpiryDate"
+            android:textColor="#121111"
+            android:textSize="18sp"
+            android:typeface="sans"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.316"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_drivingLicense" />
+
+        <EditText
+            android:id="@+id/et_licenseExpiry"
+            android:layout_width="250dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/custom_input"
+            android:drawablePadding="10dp"
+            android:layout_margin="16dp"
+            android:ems="10"
+            android:hint="21/07/2022"
+            android:inputType="textPersonName"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textColorHint="#90080809"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <Button
+            android:id="@+id/btn_Edit"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginBottom="72dp"
+            android:background="@drawable/rounded_corner"
+            android:text="Edit"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/btn_Delete"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="72dp"
+        android:background="@drawable/rounded_corner"
+        android:text="DELETE"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+
+
+    <Button
+        android:id="@+id/btn_Save"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="72dp"
+        android:background="@drawable/rounded_corner"
+        android:text="Confirm"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+
+</LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
