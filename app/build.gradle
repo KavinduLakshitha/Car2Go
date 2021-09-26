@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.car2go"
-        minSdkVersion 19
+        minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -49,6 +49,8 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui:2.3.5'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.multidex:multidex:2.0.1'
+
+
     implementation 'com.google.firebase:firebase-database:20.0.2'
 
     // Import the BoM for the Firebase platform
@@ -58,6 +60,8 @@ dependencies {
     // For example, declare the dependencies for Firebase Authentication and Cloud Firestore
     implementation 'com.google.firebase:firebase-auth'
     implementation 'com.google.firebase:firebase-firestore'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.firebase:firebase-storage:20.0.0'
 
 
     testImplementation 'junit:junit:4.+'

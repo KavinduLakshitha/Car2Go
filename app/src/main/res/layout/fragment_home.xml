@@ -6,17 +6,193 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
-    <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/homepagetopimg"
+        android:layout_width="416dp"
+        android:layout_height="284dp"
+        android:layout_marginTop="-5dp"
+        android:src="@drawable/homecoverimg"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="93dp"
+        android:layout_height="102dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.698"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/homepagetopimg" />
+
+    <ImageView
+        android:id="@+id/bgimg"
+        android:layout_width="736dp"
+        android:layout_height="843dp"
+        android:layout_marginTop="84dp"
+        android:alpha="0.4"
+        android:src="@drawable/car_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.153"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/headingbg"
+        android:layout_width="410dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="3dp"
+        android:background="#8BFFFFFF"
+        android:text="@string/headingempty"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/homepagetopimg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/headingtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/heading"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/homepagetopimg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/cussupico"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="60dp"
+        android:tint="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homepagetopimg"
+        app:srcCompat="@drawable/ic_baseline_support_agent_24" />
+
+    <TextView
+        android:id="@+id/customer_support_tv"
+        android:layout_width="167dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/cs_tv"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.553"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homepagetopimg" />
+
+    <TextView
+        android:id="@+id/cs_txt"
+        android:layout_width="309dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="12dp"
+        android:background="#7FFFFFFF"
+        android:fontFamily="sans-serif"
+        android:gravity="center|left"
+        android:text="@string/cs_txt"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.843"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/customer_support_tv" />
+
+    <ImageView
+        android:id="@+id/endlessico"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="56dp"
+        android:tint="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cs_txt"
+        app:srcCompat="@drawable/endless" />
+
+    <TextView
+        android:id="@+id/eo_txt"
+        android:layout_width="311dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="128dp"
+        android:background="#7FFFFFFF"
+        android:fontFamily="sans-serif"
+        android:gravity="center|left"
+        android:text="@string/eo_tv"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.84"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/customer_support_tv" />
+
+    <TextView
+        android:id="@+id/eo_tv"
+        android:layout_width="167dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/endlesso_tv"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.606"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cs_txt" />
+
+    <ImageView
+        android:id="@+id/confientico"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eo_txt"
+        app:srcCompat="@drawable/drive_safe" />
+
+    <TextView
+        android:id="@+id/ds_txt3"
+        android:layout_width="167dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/ds_tv"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.606"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eo_txt" />
+
+    <TextView
+        android:id="@+id/ds_txt4"
+        android:layout_width="311dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="252dp"
+        android:background="#7FFFFFFF"
+        android:fontFamily="sans-serif"
+        android:gravity="center|left"
+        android:text="@string/ds_txt"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/customer_support_tv" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -42,4 +42,29 @@ public class AdminFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
+    final EditText et_carName = (EditText) findViewById(R.id.et_carName);
+    final EditText et_distance = (EditText) findViewById(R.id.et_distance);
+    final EditText et_insurance = (EditText) findViewById(R.id.et_insurance);
+    final EditText et_description= (EditText) findViewById(R.id.et_description);
+
+        dbDriverDetails.addListenerForSingleValueEvent(new ValueEventListener() {
+        @Override
+        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+            if (dataSnapshot.hasChildren()) {
+                et_carName.setText(dataSnapshot.child("carName").getValue().toString());
+                et_distance.setText(dataSnapshot.child("distance").getValue().toString());
+                et_insurance.setText(dataSnapshot.child("insurance").getValue().toString());
+                et_description.setText(dataSnapshot.child("description").getValue().toString());
+
+            } else {
+                Toast.makeText(getApplicationContext(), "not successful", Toast.LENGTH_LONG).show();
+            }
+
+        }
+
+        @Override
+        public void onCancelled(@NonNull @NotNull DatabaseError error) {
+            Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_LONG).show();
+        }
+    });
 }
