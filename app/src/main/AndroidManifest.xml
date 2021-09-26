@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Car2GO">
-        <activity android:name=".ui.services.AddInquiry"/> >
+        <activity android:name=".ui.services.AddInquiry"/>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
