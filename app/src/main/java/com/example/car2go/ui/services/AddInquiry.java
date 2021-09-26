@@ -1,17 +1,21 @@
 package com.example.car2go.ui.services;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.car2go.R;
@@ -58,7 +62,13 @@ public class AddInquiry extends AppCompatActivity {
 
             }
         });
+
+
+
+
+
     }
+
 
     @Override
     protected void onStart() {
@@ -80,6 +90,64 @@ public class AddInquiry extends AppCompatActivity {
 
             }
         });
+
+    }
+
+    private void showUpdateDialog(String inquiryID, String customerName, String customerNIC, String customerEmail, String customerPhone, String customerInquiry){
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
+        final View dialogView = inflater.inflate(R.layout.update_inquiry,null);
+        dialogBuilder.setView(dialogView);
+        final EditText editName = (EditText) dialogView.findViewById(R.id.editTextName);
+        final EditText editNIC = (EditText) dialogView.findViewById(R.id.editTextNIC);
+        final EditText editPhone = (EditText) dialogView.findViewById(R.id.editTextPhone);
+        final EditText editEmail = (EditText) dialogView.findViewById(R.id.editTextEmail);
+        final EditText editInquiry= (EditText) dialogView.findViewById(R.id.editTextInquiry);
+        final Button buttonUpdate = (Button) dialogView.findViewById(R.id.buttonUpdate);
+        final Button buttonDelete = (Button) dialogView.findViewById(R.id.buttonDelete);
+        dialogBuilder.setTitle("Updating Inquiry" + inquiryID);
+        final AlertDialog alertDialog = dialogBuilder.create();
+        alertDialog.show();
+        buttonUpdate.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                String name = editName.getText().toString().trim();
+                String nic = editNIC.getText().toString().trim();
+                String phone = editPhone.getText().toString().trim();
+                String email= editEmail.getText().toString().trim();
+                String inquiry = editInquiry.getText().toString().trim();
+                if (TextUtils.isEmpty(inquiry)) {
+                    editInquiry.setError("Inquiry Required");
+                    return;
+               }
+                updateArtist(inquiryID, name, nic, phone, email,inquiry);
+                alertDialog.dismiss();
+            }
+        });
+        buttonDelete.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                deleteInquiry(inquiryID);
+            }
+        });
+
+    }
+    private void deleteInquiry(String inquiryID){
+       DatabaseReference drInquiry = FirebaseDatabase.getInstance().getReference("inquiries").child(inquiryID);
+       drInquiry.removeValue();
+        Toast.makeText(this,"Inquiry Delete Succesfull",Toast.LENGTH_LONG).show();
+
+
+    }
+    private boolean updateArtist(String inquiryId, String customerName, String customerNIC, String customerEmail, String customerPhone, String customerInquiry){
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("inquiries").child(inquiryId);
+        Inquiry inquiry  = new Inquiry(inquiryId, customerName , customerNIC,customerEmail,customerPhone,customerInquiry);
+
+
+        databaseReference.setValue(inquiry);
+        Toast.makeText(this,"Inquiry Updated Succesfull",Toast.LENGTH_LONG).show();
+        return true;
     }
 
     private void addInquiry(){

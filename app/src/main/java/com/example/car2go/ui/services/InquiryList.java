@@ -16,7 +16,7 @@ import java.util.List;
 
 public class InquiryList extends ArrayAdapter<Inquiry> {
     private Activity context;
-    private List<Inquiry> inquiryList;
+    List<Inquiry> inquiryList;
     public InquiryList(Activity context, List<Inquiry> inquiryList){
         super(context, R.layout.inquiry_list, inquiryList);
         this.context = context;
