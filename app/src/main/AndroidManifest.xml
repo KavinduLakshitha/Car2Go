@@ -15,6 +15,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Car2GO">
+        <activity android:name=".ui.payment.ConfirmRentalActivity"></activity>
+        <activity android:name=".ui.payment.AddPaymentActivity" />
+        <activity android:name=".ui.payment.EditDriverDetailsActivity" />
+        <activity android:name=".ui.payment.AddDetailsActivity" />
+        <activity android:name=".ui.payment.ForgotPasswordActivity" />
+        <activity android:name=".ui.payment.SignUpActivity" />
+        <activity android:name=".ui.payment.LoginActivity" />
+        <activity android:name=".ui.rentCar.SubmittedActivity"></activity>
+        <activity android:name=".ui.rentCar.SummaryActivity" />
+        <activity android:name=".ui.rentCar.CarActivity" />
+        <activity android:name=".ui.rentCar.RentCarActivity" />
         <activity android:name=".ui.services.ContactUs"></activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -38,6 +49,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 </manifest>

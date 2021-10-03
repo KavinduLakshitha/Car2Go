@@ -38,4 +38,84 @@
         <item>Bad</item>
         <item>Very Bad</item>
     </array>
+    <string name="tv_proheading">My Profile</string>
+    <string name="menu_payment">Payment</string>
+
+    <string name="tv_heading">Car2Go</string>
+    <string name="tv_subheading">Start Your Journey</string>
+    <string name="btn_signup">Sign up</string>
+    <string name="btn_login">Log in</string>
+    <string name="tv_SignUp">Sign up</string>
+    <string name="et_text" />
+    <string name="et_email" />
+    <string name="et_phone" />
+    <string name="et_password" />
+    <string name="chkbox_agree">I agree to the terms and conditions</string>
+    <string name="btn_signUp">Create Account</string>
+    <string name="tv_linkLogin">Already have an account? <a href=" ">Log in</a></string>
+    <string name="tv_welcomeBack">Welcome Back!</string>
+    <string name="tv_loginSubHeading">Login to continue</string>
+    <string name="tv_forgotPW"> <a href=" ">Forgot Password?</a> </string>
+    <string name="btn_logIn">LOG IN</string>
+    <string name="tv_linkSignUp">Dont have an Account?  </string>
+    <string name="tv_subHeadingSignUp">Sign Up to start your new journey!</string>
+    <string name="title_activity_add_driver_details">AddDriverDetails</string>
+    <string name="tv_driverDetailHeading">Few more steps to confirm!</string>
+    <string name="tv_enterReservationCode">Enter your Reservation Code</string>
+    <string name="tv_addDriverDetails">Who is driving?</string>
+    <string name="et_firstName" />
+    <string name="et_lastName" />
+    <string name="et_driverEmail" />
+    <string name="btn_useCamera">Use Camera</string>
+    <string name="tv_uploadDrivingLicense">You need to upload your driving license</string>
+    <string name="tv_OR">OR</string>
+    <string name="btn_chooseFromGallery">Select from Gallery</string>
+    <string name="et_reservationCode" />
+    <string name="tv_enterDriverName">Name *</string>
+    <string name="tv_enterEmail">Email*</string>
+    <string name="tv_enterNIC">NIC Number*</string>
+    <string name="et_driverNIC" />
+    <string name="btn_continue">Continue</string>
+    <string name="tv_submitDrivingLicense">Submit your Driving License</string>
+    <string name="tv_drivingLicensePoint1">You must have a valid SriLanka driving License.</string>
+    <string name="tv_drivingLicensePoint2">This information will remain confidential.</string>
+    <string name="btn_driLicenseContinue">Save and Continue</string>
+    <string name="tv_DrivingLicense">Driving License</string>
+    <string name="btn_changePhoto">Change Photo</string>
+    <string name="tv_enterLicenseNumber">License Number *</string>
+    <string name="tv_enterExpiryDate">Expiry Date *</string>
+    <string name="tv_driverDetails">Driver Details</string>
+    <string name="tv_editDetails">Confirm Your Details</string>
+    <string name="tv_driverName">Full Name</string>
+    <string name="et_driverName" />
+    <string name="tv_driverEmail">Email</string>
+    <string name="et_driveEmail" />
+    <string name="tv_driveNic">NIC Number</string>
+    <string name="et_driveNic" />
+    <string name="tv_resCode">Reservation ID</string>
+    <string name="et_resCode" />
+    <string name="btn_driverDetailDelete">Delete</string>
+    <string name="btn_driverDetailEdit">Edit</string>
+    <string name="tv_licenseDetails">Driving License Details</string>
+    <string name="tv_licenseNum">Driving License Number</string>
+    <string name="et_licenseNum" />
+    <string name="tv_licenseExpiry">Expiry Date</string>
+    <string name="btn_licenseEdit">Edit</string>
+    <string name="btn_licenseDelete">Delete</string>
+    <string name="btn_contiToPayment">Save </string>
+    <string name="tv_payment">Add Payment Details</string>
+    <string name="tv_payMessage">To confirm your booking, you have to make a payment of Rs.3000.00</string>
+    <string name="tv_cardNumber">Card Number *</string>
+    <string name="et_cardNumber" />
+    <string name="tv_enterCVV">CVV *</string>
+    <string name="tv_cardName">Name on Card *</string>
+    <string name="tv_saveData">Save card data for future payments</string>
+    <string name="btn_confirm">Confirm</string>
+    <string name="tv_bookingConfirmed">YOUR BOOKING CONFIRMED</string>
+    <string name="tv_thankMessage">Thank you for booking with us.</string>
+    <string name="tv_sendEmail">We will email all the details of your booking.</string>
+    <string name="btn_OK">OK</string>
+    <string name="tv_sign">Sign In</string>
+
+    <string name="your_car">YOUR CAR</string>
 </resources>

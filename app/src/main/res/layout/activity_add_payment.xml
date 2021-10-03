@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.payment.AddPaymentActivity">
+
+    <View
+        android:id="@+id/topView"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/purple_500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_Payment"
+        android:layout_width="267dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="24dp"
+        android:drawableLeft="@drawable/ic_arrow_back"
+        android:drawablePadding="10dp"
+        android:text="@string/tv_payment"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_payMessage"
+        android:layout_width="320dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/tv_payMessage"
+        android:textColor="#C51A1A"
+        android:textSize="16sp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.351"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topView" />
+
+    <TextView
+        android:id="@+id/tv_cardNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="23dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/tv_cardNumber"
+        android:textColor="#0000C8"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.107"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_payMessage" />
+
+
+    <EditText
+        android:id="@+id/et_cardNumber"
+        android:layout_width="320dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/custom_input"
+        android:drawableRight="@drawable/ic_baseline_credit_card_24"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint=" xxxx  xxxx  xxxx  xxxx "
+        android:inputType="textPassword"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:text="@string/et_cardNumber"
+        android:textColorHint="#BC606167"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cardNumber" />
+
+    <EditText
+        android:id="@+id/et_cardName"
+        android:layout_width="320dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/custom_input"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Shamika Kawshalya"
+        android:inputType="textPersonName"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:text="@string/et_cardNumber"
+        android:textColorHint="#BC72737C"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cardName" />
+
+    <EditText
+        android:id="@+id/et_cardNumber2"
+        android:layout_width="115dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/custom_input"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="xxx"
+        android:inputType="textPassword"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:text="@string/et_cardNumber"
+        android:textColorHint="#BC72737C"
+        app:layout_constraintBaseline_toBaselineOf="@+id/et_expiryDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.013"
+        app:layout_constraintStart_toEndOf="@+id/et_expiryDate" />
+
+    <TextView
+        android:id="@+id/tv_enterExpiryDate"
+        android:layout_width="115dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/tv_enterExpiryDate"
+        android:textColor="#0000C8"
+        android:textSize="18sp"
+        android:typeface="sans"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_cardNumber" />
+
+    <TextView
+        android:id="@+id/tv_cardName"
+        android:layout_width="179dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/tv_cardName"
+        android:textColor="#0000C8"
+        android:textSize="18sp"
+        android:typeface="sans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.146"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_expiryDate" />
+
+    <TextView
+        android:id="@+id/tv_enterCVV"
+        android:layout_width="115dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="68dp"
+        android:text="@string/tv_enterCVV"
+        android:textColor="#0000C8"
+        android:textSize="18sp"
+        android:typeface="sans"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_enterExpiryDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_enterExpiryDate" />
+
+    <EditText
+        android:id="@+id/et_expiryDate"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/custom_input"
+        android:drawableRight="@drawable/ic_baseline_calendar_today_24"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="dd/mm/yyyy"
+        android:inputType="textPersonName"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:text="@string/et_reservationCode"
+        android:textColorHint="#BC72737C"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_enterExpiryDate" />
+
+    <Button
+        android:id="@+id/btn_OK"
+        android:layout_width="171dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="116dp"
+        android:background="@drawable/rounded_corner"
+        android:text="@string/btn_confirm"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.754"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_cardName"
+        app:layout_constraintVertical_bias="0.457" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
