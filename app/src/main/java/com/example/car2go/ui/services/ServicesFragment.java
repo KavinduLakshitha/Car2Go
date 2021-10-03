@@ -19,7 +19,8 @@ import com.example.car2go.databinding.FragmentServicesBinding;
 
 
 public class ServicesFragment extends Fragment {
-    private Button inquiry;
+    private Button inquiry,rate_us,con_us;
+
 
     private @NonNull FragmentServicesBinding binding;
 
@@ -38,6 +39,24 @@ public class ServicesFragment extends Fragment {
                             startActivity(intent);
             }
         });
+        rate_us = root.findViewById(R.id.rate_us);
+        rate_us.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(getActivity(), AddRating.class);
+                startActivity(intent);
+            }
+        });
+        con_us = root.findViewById(R.id.con_us);
+        con_us.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(getActivity(), ContactUs.class);
+                startActivity(intent);
+            }
+        });
+
+
         return root;
 
     }

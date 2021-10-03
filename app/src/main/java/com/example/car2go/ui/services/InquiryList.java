@@ -8,7 +8,6 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 
 import com.example.car2go.R;
 
@@ -38,7 +37,7 @@ public class InquiryList extends ArrayAdapter<Inquiry> {
 
 
         Inquiry inquiry = inquiryList.get(position);
-        textViewID.setText(inquiry.getCustomerName());
+        textViewID.setText(inquiry.getInquiryId());
         textViewName.setText(inquiry.getCustomerName());
         textViewNIC.setText(inquiry.getCustomerNIC());
         textViewEmail.setText(inquiry.getCustomerEmail());
