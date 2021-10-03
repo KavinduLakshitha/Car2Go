@@ -34,49 +34,6 @@
             android:textSize="25sp"
             android:textStyle="bold|italic" />
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="30dp"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="10dp"
-            app:contentPadding="20dp">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/tv_enterLicenseNumber"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/tv_enterReservationCode"
-                    android:textColor="#D80606"
-                    android:textSize="18sp" />
-
-                <EditText
-                    android:id="@+id/et_reservationCode"
-                    android:layout_width="250dp"
-                    android:layout_height="45dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="16dp"
-                    android:background="@drawable/custom_input"
-                    android:drawablePadding="10dp"
-                    android:ems="10"
-                    android:hint="Reservation Code"
-                    android:inputType="textPersonName"
-                    android:paddingStart="12dp"
-                    android:paddingEnd="12dp"
-                    android:text="@string/et_reservationCode"
-                    android:textColorHint="#90080809"
-                    android:textSize="16sp" />
-
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
         <TextView
             android:id="@+id/tv_addDriverDetails"
             android:layout_width="237dp"

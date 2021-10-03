@@ -2,10 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.car2go">
 
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -14,9 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Car2GO">
         <activity android:name=".ui.payment.ConfirmRentalActivity"></activity>
-        <activity android:name=".ui.payment.AddPaymentActivity">
-
-        </activity>
+        <activity android:name=".ui.payment.AddPaymentActivity" />
         <activity android:name=".ui.payment.EditDriverDetailsActivity" />
         <activity android:name=".ui.payment.AddDetailsActivity" />
         <activity android:name=".ui.payment.ForgotPasswordActivity" />
@@ -33,15 +27,6 @@
             </intent-filter>
         </activity>
 
-        <provider
-            android:name="androidx.core.content.FileProvider"
-            android:authorities="com.example.android.fileprovider"
-            android:exported="false"
-            android:grantUriPermissions="true">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths" />
-        </provider>
     </application>
 
 </manifest>
