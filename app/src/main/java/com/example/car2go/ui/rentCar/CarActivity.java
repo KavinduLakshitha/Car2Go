@@ -18,8 +18,8 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class CarActivity extends AppCompatActivity {
 
-     private Button proceed, delete;
-     private EditText start, end, totalDays, pickup, retLocation;
+     private Button proceed,save;
+     private EditText nic, start, end, totalDays, pickup, retLocation;
      DatabaseReference dbTripDetails;
 
      ActivityCarBinding binding;
@@ -30,8 +30,6 @@ public class CarActivity extends AppCompatActivity {
 
         binding = ActivityCarBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
-
 
         Intent intent = this.getIntent();
 
@@ -47,7 +45,7 @@ public class CarActivity extends AppCompatActivity {
             binding.color.setText(color);
             binding.image.setImageResource(imageId);
         }
-
+        nic = (EditText) findViewById(R.id.nic);
         start = (EditText) findViewById(R.id.start);
         end = (EditText) findViewById(R.id.end);
         totalDays = (EditText) findViewById(R.id.totalDays);
@@ -58,18 +56,55 @@ public class CarActivity extends AppCompatActivity {
         proceed = (Button) findViewById(R.id.proceed);
         proceed.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { saveTripDetails(); }
+            public void onClick(View v) { saveTripDetails();}
+        });
+
+        nic= findViewById(R.id.nic);
+        start= findViewById(R.id.start);
+        end= findViewById(R.id.end);
+        totalDays= findViewById(R.id.totalDays);
+        pickup= findViewById(R.id.pickup);
+        retLocation= findViewById(R.id.retLocation);
+        save = findViewById(R.id.save);
+
+        save.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+
+                String NIC = nic.getText().toString();
+                String Start = start.getText().toString();
+                String End = end.getText().toString();
+                String TotalDays = totalDays.getText().toString();
+                String Pickup = pickup.getText().toString();
+                String RetLocation = retLocation.getText().toString();
+
+                Intent i = new Intent(CarActivity.this,SummaryActivity.class);
+
+                i.putExtra("nic",NIC);
+                i.putExtra("start",Start);
+                i.putExtra("end",End);
+                i.putExtra("totalDays",TotalDays);
+                i.putExtra("pickup",Pickup);
+                i.putExtra("retLocation",RetLocation);
+                startActivity(i);
+            }
         });
     }
 
 
     private void saveTripDetails(){
+        String NIC = nic.getText().toString().trim();
         String Start = start.getText().toString().trim();
         String End = end.getText().toString().trim();
         String TotalDays = totalDays.getText().toString().trim();
         String Pickup = pickup.getText().toString().trim();
         String RetLocation = retLocation.getText().toString().trim();
 
+        if(NIC.isEmpty()){
+            nic.setError("Starting Date is required");
+            nic.requestFocus();
+        }
         if(Start.isEmpty()){
              start.setError("Starting Date is required");
              start.requestFocus();
@@ -90,14 +125,19 @@ public class CarActivity extends AppCompatActivity {
              retLocation.setError("required");
              retLocation.requestFocus();
          }
+
+
         else{
 
              String id  = dbTripDetails.push().getKey();
 
-             TripDetails tripDetails = new TripDetails(id, Start, End, TotalDays, Pickup, RetLocation);
+             TripDetails tripDetails = new TripDetails(id, NIC, Start, End, TotalDays, Pickup, RetLocation);
              dbTripDetails.child(id).setValue(tripDetails);
-             startActivity(new Intent(CarActivity.this, SummaryActivity.class));
+             Toast.makeText(CarActivity.this,"Details Saved Successfully",Toast.LENGTH_LONG).show();
 
+
+
+             //startActivity(new Intent(CarActivity.this, CarActivity.class));
          }
     }
 }
