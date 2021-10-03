@@ -28,7 +28,7 @@ import java.util.regex.Pattern;
 public class AddDetailsActivity extends AppCompatActivity  {
 
     private Button btn_continue;
-    private EditText et_reservationCode, et_FullName, et_driverEmail, et_driverNIC;
+    private EditText  et_FullName, et_driverEmail, et_driverNIC;
     private ProgressBar progressBar;
     private Button btn_OK;
     Button mChooseBtn;
@@ -43,7 +43,7 @@ public class AddDetailsActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_details);
 
-        et_reservationCode = (EditText)findViewById(R.id.et_reservationCode);
+
         et_FullName = (EditText)findViewById(R.id.et_FullName);
         et_driverEmail = (EditText)findViewById(R.id.et_driverEmail);
         et_driverNIC = (EditText)findViewById(R.id.et_driverNIC);
@@ -87,7 +87,6 @@ public class AddDetailsActivity extends AppCompatActivity  {
     }
 
     private void saveDriverDetails() {
-        String reservationCode = et_reservationCode.getText().toString().trim();
         String fullName = et_FullName.getText().toString().trim();
         String driverEmail = et_driverEmail.getText().toString().trim();
         String driverNIC = et_driverNIC.getText().toString().trim();
@@ -100,14 +99,16 @@ public class AddDetailsActivity extends AppCompatActivity  {
         Pattern nicPattern = Pattern.compile(nicRegex);
         nicMatcher = nicPattern.matcher(driverNIC);
 
+//        //validate driving license number
+//        String drivingLicenseRegex = "^([x|X|B|B][0-9]{7}[x|X|D|D])$";
+//        Matcher drivingLicenseMatcher;
+//        Pattern drivingLicensePattern = Pattern.compile(drivingLicenseRegex);
+//        drivingLicenseMatcher = drivingLicensePattern.matcher(licenseNumber);
+
+
         if (fullName.isEmpty()) {
             et_FullName.setError("Driver's name is required");
             et_FullName.requestFocus();
-            return;
-        }
-        if (reservationCode.isEmpty()) {
-            et_reservationCode.setError("Reservation Code is required");
-            et_reservationCode.requestFocus();
             return;
         }
         if (driverEmail.isEmpty()) {
@@ -135,6 +136,8 @@ public class AddDetailsActivity extends AppCompatActivity  {
             et_drivingLicense.requestFocus();
             return;
         }
+
+
         if(expiryDate.isEmpty()){
             etDate.setError("Expiry Date is required");
             etDate.requestFocus();
@@ -143,7 +146,7 @@ public class AddDetailsActivity extends AppCompatActivity  {
         else{
             String id = dbDriverDetails.push().getKey();
 
-            DriverDetails driverDetails = new DriverDetails(id,reservationCode, fullName, driverEmail, driverNIC, licenseNumber, expiryDate);
+            DriverDetails driverDetails = new DriverDetails(id, fullName, driverEmail, driverNIC, licenseNumber, expiryDate);
             dbDriverDetails.setValue(driverDetails);
             startActivity(new Intent(AddDetailsActivity.this, EditDriverDetailsActivity.class));
 

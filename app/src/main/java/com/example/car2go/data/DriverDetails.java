@@ -2,7 +2,6 @@ package com.example.car2go.data;
 
 public class DriverDetails {
     private String driverDetailsId;
-    private String reservationCode;
     private String driverName;
     private String driverEmail;
     private String nicNumber;
@@ -14,9 +13,8 @@ public class DriverDetails {
 
     }
 
-    public DriverDetails(String driverDetailsId, String reservationCode, String driverName, String driverEmail, String nicNumber, String licenseNumber, String expiryDate) {
+    public DriverDetails(String driverDetailsId, String driverName, String driverEmail, String nicNumber, String licenseNumber, String expiryDate) {
         this.driverDetailsId = driverDetailsId;
-        this.reservationCode = reservationCode;
         this.driverName = driverName;
         this.driverEmail = driverEmail;
         this.nicNumber = nicNumber;
@@ -28,10 +26,6 @@ public class DriverDetails {
 
     public String getDriverDetailsId() {
         return driverDetailsId;
-    }
-
-    public String getReservationCode() {
-        return reservationCode;
     }
 
     public String getDriverName() {
@@ -58,9 +52,6 @@ public class DriverDetails {
         this.driverDetailsId = driverDetailsId;
     }
 
-    public void setReservationCode(String reservationCode) {
-        this.reservationCode = reservationCode;
-    }
 
     public void setDriverName(String driverName) {
         this.driverName = driverName;

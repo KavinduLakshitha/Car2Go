@@ -28,7 +28,7 @@ import java.util.Map;
 public class EditDriverDetailsActivity extends AppCompatActivity {
     private DatabaseReference dbDriverDetails;
     private Button btn_Edit, btn_Delete;
-    private  Button btn_SaveDetails;
+    private  Button btn_Save;
     private EditText et_FullName, et_driverEmail, et_driverNIC,et_drivingLicense, etDate;
 
 
@@ -39,19 +39,19 @@ public class EditDriverDetailsActivity extends AppCompatActivity {
 
         btn_Edit=findViewById(R.id.btn_Edit);
         btn_Delete=findViewById(R.id.btn_Delete);
-        btn_SaveDetails = findViewById(R.id.btn_OK);
+        btn_Save = findViewById(R.id.btn_Save);
 
         //user = FirebaseAuth.getInstance().getCurrentUser();
-
-        dbDriverDetails = FirebaseDatabase.getInstance().getReference().child("DriverDetails")
-                .child(FirebaseAuth.getInstance().getCurrentUser().getUid());
-
 
         et_FullName = (EditText)findViewById(R.id.et_FullName);
         et_driverEmail = (EditText)findViewById(R.id.et_driverEmail);
         et_driverNIC = (EditText)findViewById(R.id.et_driverNIC);
         etDate = findViewById(R.id.et_expiryDate);
         et_drivingLicense = (EditText) findViewById(R.id.et_drivingLicense);
+
+        dbDriverDetails = FirebaseDatabase.getInstance().getReference().child("DriverDetails")
+                .child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+
 
         btn_Edit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,9 +63,9 @@ public class EditDriverDetailsActivity extends AppCompatActivity {
                 String expiryDate = etDate.getText().toString().trim();
 
                 Map<String,Object> map = new HashMap<>();
-                map.put("fullName",fullName);
+                map.put("driverName",fullName);
                 map.put("driverEmail",driverEmail);
-                map.put("driverNIC",driverNIC);
+                map.put("nicNumber",driverNIC);
                 map.put("licenseNumber",licenseNumber);
                 map.put("expiryDate",expiryDate);
 
@@ -74,13 +74,22 @@ public class EditDriverDetailsActivity extends AppCompatActivity {
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         dbDriverDetails.updateChildren(map);
                         Toast.makeText(EditDriverDetailsActivity.this,"Details Updated", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(EditDriverDetailsActivity.this,LoginActivity.class));
+                        startActivity(new Intent(EditDriverDetailsActivity.this,
+                                AddPaymentActivity.class));
                     }
                     @Override
                     public void onCancelled(@NonNull @NotNull DatabaseError error) {
-                           Toast.makeText(EditDriverDetailsActivity.this,"Failed to update",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(EditDriverDetailsActivity.this,"Failed to update",Toast.LENGTH_SHORT).show();
                     }
                 });
+            }
+        });
+
+        btn_Save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(EditDriverDetailsActivity.this, AddPaymentActivity.class);
+                startActivity(intent);
             }
         });
 
