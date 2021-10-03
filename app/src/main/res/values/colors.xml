@@ -7,4 +7,6 @@
     <color name="teal_700">#0000C8</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="text_input_bg_colour">#DEDEF7</color>
+    <color name="btn_blue">#630DEC</color>
 </resources>

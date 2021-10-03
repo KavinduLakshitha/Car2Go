@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "982407727893",
-    "project_id": "car2gocarrental-301be",
-    "storage_bucket": "car2gocarrental-301be.appspot.com"
+    "project_number": "388638500142",
+    "project_id": "car2go-c5b88",
+    "storage_bucket": "car2go-c5b88.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:982407727893:android:415fc928909e66afe1f71c",
+        "mobilesdk_app_id": "1:388638500142:android:eafe42c2ebbdac2afc86bf",
         "android_client_info": {
           "package_name": "com.example.car2go"
         }
       },
       "oauth_client": [
         {
-          "client_id": "982407727893-tqbi01c3binbk0th1d75v8l1k5sir9d1.apps.googleusercontent.com",
+          "client_id": "388638500142-5gnluhqqoe8gmdbnd59366bvchh6np8k.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBEb4rMam4DbGAXYNlGZdCNnIKdiIfHsH4"
+          "current_key": "AIzaSyDklid6E13OBmjzRTknBgObWEChjTYcxUg"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "982407727893-tqbi01c3binbk0th1d75v8l1k5sir9d1.apps.googleusercontent.com",
+              "client_id": "388638500142-5gnluhqqoe8gmdbnd59366bvchh6np8k.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
