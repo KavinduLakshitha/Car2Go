@@ -12,32 +12,6 @@
     <string name="menu_admin">Admin Panel</string>
     <string name="menu_services">Customer Service</string>
     <string name="menu_profile">My Account</string>
-    <string name="tv_ProHeading">My Profile</string>
-    <string name="inq_btn">btn</string>
-
-    <string name="inquiry_btn">INQUIRY</string>
-    <string name="rateus_btn">RATE US</string>
-    <string name="contactus_btn">CONTACT US</string>
-    <string name="inquiry">INQUIRY</string>
-    <string name="inq_name">Name</string>
-    <string name="name_input">enter your name</string>
-    <string name="inq_nic">NIC</string>
-    <string name="inq_email">Email</string>
-    <string name="nic_input">NIC</string>
-    <string name="input_email">email</string>
-    <string name="inq_phone">Phone</string>
-    <string name="inq_inquiry">Inquiry</string>
-    <string name="input_inquiry">Inquiry</string>
-    <string name="inq_send_btn">Send</string>
-    <string name="input_phone">enter phone number</string>
-    <string name="str_branches">Branches</string>
-
-    <array name="genres">
-        <item>Very Good</item>
-        <item>Good</item>
-        <item>Bad</item>
-        <item>Very Bad</item>
-    </array>
     <string name="tv_proheading">My Profile</string>
     <string name="menu_payment">Payment</string>
 
@@ -117,5 +91,4 @@
     <string name="btn_OK">OK</string>
     <string name="tv_sign">Sign In</string>
 
-    <string name="your_car">YOUR CAR</string>
 </resources>
