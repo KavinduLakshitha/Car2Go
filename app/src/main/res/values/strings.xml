@@ -14,8 +14,9 @@
     <string name="menu_profile">My Account</string>
     <string name="tv_ProHeading">My Profile</string>
     <string name="inq_btn">btn</string>
+
     <string name="inquiry_btn">INQUIRY</string>
-    <string name="RateUs_btn">RATE US</string>
+    <string name="rateus_btn">RATE US</string>
     <string name="contactus_btn">CONTACT US</string>
     <string name="inquiry">INQUIRY</string>
     <string name="inq_name">Name</string>
@@ -29,4 +30,12 @@
     <string name="input_inquiry">Inquiry</string>
     <string name="inq_send_btn">Send</string>
     <string name="input_phone">enter phone number</string>
+    <string name="str_branches">Branches</string>
+
+    <array name="genres">
+        <item>Very Good</item>
+        <item>Good</item>
+        <item>Bad</item>
+        <item>Very Bad</item>
+    </array>
 </resources>

@@ -181,14 +181,15 @@
 
         <ListView
             android:id="@+id/listViewInquiry"
-            android:layout_width="397dp"
-            android:layout_height="301dp"
+            android:layout_width="385dp"
+            android:layout_height="192dp"
             android:layout_marginTop="28dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.615"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/enter_inquiry"
-            app:layout_constraintVertical_bias="0.558" />
+            app:layout_constraintVertical_bias="0.482" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

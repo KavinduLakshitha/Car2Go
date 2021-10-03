@@ -1,22 +1,18 @@
 package com.example.car2go.ui.services;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.car2go.R;
 import com.google.firebase.database.DataSnapshot;
@@ -25,10 +21,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class AddInquiry extends AppCompatActivity {
     EditText name,nic,phone,email,inquiry;
@@ -42,7 +38,7 @@ public class AddInquiry extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_inquiry);
 
-        databaseInquiry = FirebaseDatabase.getInstance().getReference("inquiries");
+        databaseInquiry = FirebaseDatabase.getInstance().getReference("Inquiries");
         name =(EditText) findViewById(R.id.enter_name);
         phone = (EditText) findViewById(R.id.enter_phone);
         nic = (EditText) findViewById(R.id.enter_nic);
@@ -62,8 +58,27 @@ public class AddInquiry extends AppCompatActivity {
 
             }
         });
-
-
+           listViewInquiry.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+               /**
+                * Callback method to be invoked when an item in this view has been
+                * clicked and held.
+                * <p>
+                * Implementers can call getItemAtPosition(position) if they need to access
+                * the data associated with the selected item.
+                *
+                * @param parent   The AbsListView where the click happened
+                * @param view     The view within the AbsListView that was clicked
+                * @param position The position of the view in the list
+                * @param id       The row id of the item that was clicked
+                * @return true if the callback consumed the long click, false otherwise
+                */
+               @Override
+               public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                   Inquiry inquiry = inquiryList.get(position);
+                   showUpdateDialog(inquiry.getInquiryId(),inquiry.getCustomerName(),inquiry.getCustomerNIC(),inquiry.getCustomerEmail(),inquiry.getCustomerPhone(),inquiry.getCustomerInquiry());
+                   return false;
+               }
+           });
 
 
 
@@ -104,7 +119,7 @@ public class AddInquiry extends AppCompatActivity {
         final EditText editEmail = (EditText) dialogView.findViewById(R.id.editTextEmail);
         final EditText editInquiry= (EditText) dialogView.findViewById(R.id.editTextInquiry);
         final Button buttonUpdate = (Button) dialogView.findViewById(R.id.buttonUpdate);
-        final Button buttonDelete = (Button) dialogView.findViewById(R.id.buttonDelete);
+        final Button buttonDelete = (Button) dialogView.findViewById(R.id.btnDelete);
         dialogBuilder.setTitle("Updating Inquiry" + inquiryID);
         final AlertDialog alertDialog = dialogBuilder.create();
         alertDialog.show();
@@ -134,9 +149,9 @@ public class AddInquiry extends AppCompatActivity {
 
     }
     private void deleteInquiry(String inquiryID){
-       DatabaseReference drInquiry = FirebaseDatabase.getInstance().getReference("inquiries").child(inquiryID);
+       DatabaseReference drInquiry = FirebaseDatabase.getInstance().getReference("Inquiries").child(inquiryID);
        drInquiry.removeValue();
-        Toast.makeText(this,"Inquiry Delete Succesfull",Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"Inquiry Delete Successful",Toast.LENGTH_LONG).show();
 
 
     }
@@ -146,7 +161,7 @@ public class AddInquiry extends AppCompatActivity {
 
 
         databaseReference.setValue(inquiry);
-        Toast.makeText(this,"Inquiry Updated Succesfull",Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"Inquiry Updated Successful",Toast.LENGTH_LONG).show();
         return true;
     }
 
@@ -158,14 +173,35 @@ public class AddInquiry extends AppCompatActivity {
         String Email = email.getText().toString().trim();
         String Inquiry = inquiry.getText().toString().trim();
 
-        if(!TextUtils.isEmpty(Inquiry)){
-            String id = databaseInquiry.push().getKey();
-            Inquiry inquiry = new Inquiry(id, Name , NIC, Phone, Email, Inquiry );
-            databaseInquiry.child(id).setValue(inquiry);
-            Toast.makeText(this,"Inquiry Added Successful!!", Toast.LENGTH_LONG).show();
+        //validate nic number
+        String nicRegex = "^([0-9]{9}[x|X|v|V]|[0-9]{12})$";
+        Matcher nicMatcher;
+        Pattern nicPattern = Pattern.compile(nicRegex);
+        nicMatcher = nicPattern.matcher(NIC);
 
-        }else{
+        if(!TextUtils.isEmpty(Inquiry)){
+
+
+            if (!nicMatcher.find()) {
+                nic.setError("NIC Number is not valid");
+                nic.requestFocus();
+
+                if (!Patterns.EMAIL_ADDRESS.matcher(Email).matches()) {
+                    email.setError("Please provide a valid email");
+                    email.requestFocus();
+
+                    String id = databaseInquiry.push().getKey();
+                    Inquiry inquiry = new Inquiry(id, Name , NIC, Phone, Email, Inquiry );
+                    databaseInquiry.child(id).setValue(inquiry);
+
+                    Toast.makeText(this, "Inquiry Added Successful!!", Toast.LENGTH_LONG).show();
+                    return;
+                }
+            }
+        }
+        else{
             Toast.makeText(this,"You Should Enter Inquiry ", Toast.LENGTH_LONG).show();
+
         }
 
 
